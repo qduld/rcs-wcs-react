@@ -43,3 +43,8 @@ npm start
 npm run build
 ```
 
+### Effective demonstration
+![3596555e34f9a70e78b70da2ea011c3](https://github.com/qduld/rcs-wcs-react/assets/23184084/ee2830b1-ea6c-4ab0-8bfa-73e7bc380c3b)
+
+
+
