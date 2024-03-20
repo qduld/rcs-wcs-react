@@ -1,0 +1,183 @@
+//点位设置
+.pointSiteWrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .coditionMgt{
+        line-height: 1;
+        flex:1;
+        :global{
+            .ant-form-item{
+                margin-bottom: 10px;
+                &:last-child{
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+    .actionMgt{
+        flex:10;
+        display: flex;
+        flex-direction: column;
+        :global{
+            .ant-card-body{
+                display: flex;
+                flex-grow: 1;
+                flex-direction: column;
+                .ant-form-item{
+                    margin-bottom: 10px;
+                }
+                .ant-row{
+                    flex:1;
+                    // .delActionIcon{
+                    //     margin:10px 0;
+                    //     font-size:20px;
+                    //     cursor:pointer;
+                    //     color: #F84A03; 
+                    // }
+                    .ant-list{
+                        height:100%;
+                    }
+                }
+            }
+        }
+    }
+    .optionsBtn{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex:1;
+        :global{
+            .ant-card-body{
+                width: 100%;
+                .ant-row{
+                    width: 100%;
+                    justify-content: space-evenly;
+                    margin-left: 0px !important;
+                    margin-right: 0px !important;
+                    button{
+                        flex:1;
+                        margin:0 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.actionDialog{
+    :global{
+        .ant-list{
+            min-height: 300px;
+        }
+        .ant-form-item-label{
+            overflow: unset;
+        }
+        .ant-form-item-control{
+            overflow: hidden;
+        }
+    }
+}
+
+.cmdTempDialog{
+    .cmdTempHead{
+       
+    }
+    .cmdTempContent{
+        // &:first-child .ant-row{
+        //     height: 400px;
+        //     overflow: auto;
+        // }
+    }
+    :global{
+        .ant-list{
+            min-height: 200px;
+            max-height: 400px;
+        }
+        .ant-form-item-label{
+            overflow: unset;
+        }
+        .ant-form-item-control{
+            overflow: hidden;
+        }
+        .ant-form-horizontal{
+            .ant-row{
+                margin-left: 0px !important;
+                margin-right: 0px !important;
+            }
+        }
+    }
+}
+
+//路径设置
+.pathSiteWrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .pathSite{
+        line-height: 1;
+        :global{
+            .ant-form{
+                .ant-row{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .optBtn{
+            margin-bottom: 0px !important;
+            :global{
+                .ant-col{
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    display: flex;
+                    button+{
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+    // .pathPicture{
+    //     flex:1;
+    // }
+    .actionList{
+        flex: 4;
+        display: flex;
+        overflow: auto;
+        :global{
+            .ant-card-body{
+                display: flex;
+                flex-grow: 1;
+                flex-direction: column;
+                overflow: auto;
+                .ant-form-item{
+                    margin-bottom: 10px;
+                }
+                .ant-row{
+                    flex:1;
+                    overflow: auto;
+                    .ant-list{
+                        height:100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.databaseWrapper{
+    :global{
+        .ant-card-body{
+            padding:0;
+        }
+    }
+}
+
+:global{
+    .ant-card-head-title{
+        font-weight: 800;
+    }
+    .ant-select-selection-item{
+        white-space: unset;
+    }
+}

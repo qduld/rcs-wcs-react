@@ -1,0 +1,28 @@
+@keyframes warningOpacity
+{
+0%   {opacity: 0;}
+50%  {opacity: 0.5;}
+100% {opacity: 1;}
+}
+.powerWrapper{
+    height: 20px;
+    width: 42px;
+    vertical-align: text-bottom;
+    display: inline-block;
+    .warning-animate{
+        animation-delay:0;
+        animation:warningOpacity .7s infinite; 
+        -webkit-animation:warningOpacity .7s infinite; 
+        -moz-animation:warningOpacity .7s infinite; 
+        -o-animation:warningOpacity .7s infinite; 
+        -ms-animation:warningOpacity .7s infinite; 
+    }
+}
+
+.graphWrapper{
+    transform: scale(0.8);
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    overflow: unset !important;
+}

@@ -1,0 +1,67 @@
+//点位设置
+.monitorWrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .monitorCard{
+        flex: 1 1;
+        overflow: auto;
+        :global{
+            .ant-table-thead > tr > th, .ant-table-tbody > tr > td, .ant-table tfoot > tr > th, .ant-table tfoot > tr > td{
+                padding:8px 0px;
+                text-align: center;
+                position: relative;
+            }
+            .ant-card-body{
+                height: calc( 100% - 58px);
+                overflow: auto;
+                .ant-table-wrapper{
+                    border-bottom: 1px solid #f0f0f0;
+                    overflow: auto;
+                    height: 100%;
+                    .ant-table-bordered{
+                        overflow: hidden;
+                    }
+                }
+            }
+            .ant-card-head-title{
+                flex: none;
+            }
+            .ant-card-extra{
+                padding: 0;
+                float: left;
+                margin-left: unset;
+                overflow: hidden;
+            }
+            .ant-card-head-wrapper{
+                overflow: hidden;
+            }
+        }
+    }
+    .agvStatus{
+    }
+    .agvAbnormal{      
+    }
+    .extraWrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+        color: rgba(255, 0, 0, 0.85);
+        font-weight: 500;
+        .errorIcon{
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid red;
+        }
+        .extraContent{
+            word-break:keep-all;       
+            white-space:nowrap;         
+            overflow:hidden;             
+            text-overflow:ellipsis;   
+            cursor: pointer;  
+        }
+    }
+}

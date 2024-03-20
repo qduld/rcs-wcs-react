@@ -1,0 +1,232 @@
+
+// 地图样式
+.mapCanvas {
+    width: calc( 100% - 400px );
+    height: 100%;
+}
+
+@keyframes showCollapse{
+    from {display:none;}
+    to {display:inline-block;}
+}
+
+// 标签页样式
+.mapTabs{
+    position: absolute;
+    left:0;
+    transition:transform .6s ease-in 0.2s;
+    ul{
+        padding-left:4px;
+        li{
+            float: left;
+            button{
+                margin: 0 .5px;
+                border-radius: 4px;
+            }
+            .collapse{
+                padding: 4px 4px;
+                display: flex;
+                align-items: center;
+                i{font-size: 2em;}
+            }
+        }
+    }
+    .collapseHidden{
+        display: none;
+    }
+    .collapseRight{
+        position: absolute;
+        left: calc( 100% + 4px );
+        top: 0;
+        padding: 4px 4px;
+        display: flex;
+        align-items: center;
+        i{font-size: 2em;}
+        animation: showCollapse .6s;
+    }
+}
+
+.mapTabsHidden{
+    transform: translateX(-100%);
+}
+
+// 工具栏样式
+.mapTools{  
+    position: absolute;
+    left:0;
+    bottom: 0;
+    background: #F0F2F5;
+    &.hide{
+        left:-32px;
+    }
+    ul{
+        padding-left:4px;
+        margin-bottom: 10px;
+        li{
+            margin-bottom: 6px;
+            cursor: pointer;
+            text-align: center;
+            &:hover{
+                transform: scale(1.1);
+            }
+            :global{
+                .anticon{
+                    font-size: 26px;
+                }
+                .collapsedRight{
+                    position: relative;
+                    bottom:0;
+                    left:32px;
+                }
+            }
+            img{
+                width:26px;
+                height:26px;
+                opacity: 0.7;
+            }
+        }
+        .codeInputWrapper{
+            position: relative;
+            .codeInput{
+                position: absolute;
+                left: 26px;
+                top: 0;
+                width: 70px;
+                margin-left: 3px;
+                line-height: 1;
+            }
+            .codeInputSure{
+                position: absolute;
+                left: 100px;
+                top: 0;
+            }
+        }
+        .agvSideBarWrapper{
+            position: relative;
+            .agvSideBar{
+                position: absolute;
+                left: 26px;
+                top: 0;
+                width: 120px;
+                :global{
+                    .ant-slider-track{
+                        background-color: #1890ff;
+                    }
+                }
+            }
+        }
+        .codeSideBarWrapper{
+            position: relative;
+            .codeSideBar{
+                position: absolute;
+                left: 26px;
+                top: 0;
+                width: 120px;
+                :global{
+                    .ant-slider-track{
+                        background-color: #1890ff;
+                    }
+                }
+            }
+        }
+        .centerScaleWrapper{
+            position: relative;
+            .centerScaleBar{
+                position: absolute;
+                left: 26px;
+                top: 0;
+                width: 120px;
+                :global{
+                    .ant-slider-track{
+                        background-color: #1890ff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//侧边栏控制
+.mapSideBar{
+    position: absolute;
+    right:0;
+    top:0;
+    width:400px;
+    bottom:0;
+    transition:transform .6s ease-in 0.2s;
+    background: white;
+    :global{
+        .ant-tabs{
+            height: 100%;
+            .ant-tabs-top-content{
+                height:100%;
+                .ant-tabs-tabpane{
+                    height:calc( 100% - 40px );
+                    position: absolute;
+                    overflow: auto;
+                }
+            }
+        }
+        .ant-tabs-bar{
+            margin:0;
+        }
+        .ant-card-body{
+            padding:12px;
+        }
+        .ant-card-head{
+            padding: 0 12px;
+        }
+    }
+    .sideBarUnfold{
+        margin:10px 0;
+        top:0;
+        right:10px;
+        position:absolute;
+        font-size:20px;
+        cursor:pointer;
+        color: #1890ff;
+        opacity: 1;
+        animation: fade-out;/*动画名称*/  
+        animation-duration: .8s;/*动画持续时间*/  
+        -webkit-animation:fade-out .8s;/*针对webkit内核*/  
+    }
+    .sideBarFold{
+        margin:10px 0;
+        top:0;
+        right:410px;
+        position:absolute;
+        font-size:20px;
+        cursor:pointer;
+        color: #1890ff;
+        opacity: 1;
+        animation: fade-in;/*动画名称*/  
+        animation-duration: .8s;/*动画持续时间*/  
+        -webkit-animation:fade-in .8s;/*针对webkit内核*/  
+    }
+}
+
+.foldSideBar{
+    transform: translateX(400px);
+}
+
+
+@keyframes fade-in {  
+    0% {opacity: 0;}/*初始状态 透明度为0*/  
+    80% {opacity: 0;}/*过渡状态 透明度为0*/
+    100% {opacity: 1;}/*结束状态 透明度为1*/  
+}  
+@-webkit-keyframes fade-in {/*针对webkit内核*/  
+    0% {opacity: 0;}  
+    80% {opacity: 0;}  
+    100% {opacity: 1;}  
+}  
+@keyframes fade-out {  
+    0% {opacity: 1;}/*初始状态 透明度为0*/  
+    80% {opacity: 1;}/*过渡状态 透明度为0*/
+    100% {opacity: 0;}/*结束状态 透明度为1*/  
+}  
+@-webkit-keyframes fade-out {/*针对webkit内核*/  
+    0% {opacity: 1;}  
+    80% {opacity: 1;}  
+    100% {opacity: 0;}  
+}  

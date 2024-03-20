@@ -1,0 +1,77 @@
+.specialAsked>* {
+    margin: 0;
+    padding: 0;
+}
+.abnormalMgt{
+    margin:10px;
+    .abnormalMgtCard{
+        .btnOption{
+            margin-bottom: 24px;
+            button{
+                margin-right: 26px;
+                border-radius: 6px;
+            }
+            .delBtn{
+                background-color: #F84A03;
+                border-color: #F84A03;
+            }
+        }
+        .abnormalForm{
+            width: 20%;
+            :global{
+                .ant-form-item{
+                    margin-bottom: 0;
+                    .ant-form-item-control-input{
+                        max-width: 200px;
+                    }
+                }
+            }
+            .checkHidden{
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+.agvMgt{
+    margin:10px;
+    .agvMgtCard{
+        .btnOption{
+            margin-bottom: 24px;
+            button{
+                margin-right: 26px;
+                border-radius: 6px;
+            }
+            .delBtn{
+                background-color: #F84A03;
+                border-color: #F84A03;
+            }
+        }
+    }
+    :global{
+        .row-options{
+            display:inline-flex;
+            justify-content: center;
+            align-items: center;
+            .icon-options{
+                font-size: 1.6em;
+                margin-right: 1em;
+                cursor: pointer;
+                &:first-child{
+                    color: #1890FF;
+                }
+                &:last-child{
+                    color: #FFDD18;
+                }
+            }
+        }
+    }
+}
+
+
+.dialog{
+    .agvForm{
+        margin: 0 auto;
+        width: 70%;
+    }
+}

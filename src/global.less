@@ -1,0 +1,94 @@
+@import '~antd/es/style/themes/default.less';
+@import '/assets/fonts/ionicons.min.css';
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.ant-table{
+  overflow: auto;
+}
+
+.ant-card-head{
+  padding:0 12px;
+}
+
+/*滚动条样式*/
+::-webkit-scrollbar {/*滚动条整体样式*/
+  width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+  height: 6px;
+  cursor: pointer;
+}
+::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+border-radius: 10px;
+background: #dadfe6;
+}
+::-webkit-scrollbar-track {/*滚动条里面轨道*/
+background-color: rgba(218,223,230,.3);
+border-radius: 10px;
+}
+
+[class*='ion-md-'] {
+  &::before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// 兼容IE11
+@media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body .ant-design-pro > .ant-layout {
+    min-height: 100vh;
+  }
+}
+
+:global {
+  .ant-pro-basicLayout-content{
+      margin: 0;
+  }
+}
