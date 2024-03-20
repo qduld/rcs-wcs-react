@@ -1,8 +1,16 @@
-# Ant Design Pro
+# Projects Introduction
 
-This project is initialized with [Ant Design Pro](https://pro.ant.design). Follow is the quick guide for how to use.
+Warehouse wire-side warehouse project based on react pixi implementation
+
+## What you can learn
+
+1. Knowledge about the realization of storage line side bins
+2. Use of antdesign and pixi
+3. Flexible application of echarts and svg
 
 ## Environment Prepare
+
+Please use the node 16 LTS version
 
 Install `node_modules`:
 
@@ -15,6 +23,7 @@ or
 ```bash
 yarn
 ```
+
 
 ## Provided Scripts
 
@@ -34,24 +43,3 @@ npm start
 npm run build
 ```
 
-### Check code style
-
-```bash
-npm run lint
-```
-
-You can also use script to auto fix some lint error:
-
-```bash
-npm run lint:fix
-```
-
-### Test code
-
-```bash
-npm test
-```
-
-## More
-
-You can view full document on our [official website](https://pro.ant.design). And welcome any feedback in our [github](https://github.com/ant-design/ant-design-pro).
