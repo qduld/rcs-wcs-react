@@ -1,6 +1,6 @@
 # Projects Introduction
 
-Warehouse wire-side warehouse project based on react pixi implementation
+Warehouse wire-side warehouse project based on react pixi implementation, You can use it as a template for warehouse IoT applications
 
 ## What you can learn
 
